@@ -1,5 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
+
 import bodyParser from "body-parser";
 import cors from "cors";
 
@@ -19,12 +19,7 @@ db.once("open", () => {
   console.log("Connected to MongoDB database");
 });
 
-const postSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: String,
-});
-const Post = mongoose.model("Post", postSchema);
+
 
 app.get("/api/posts", async (req, res) => {
   try {
