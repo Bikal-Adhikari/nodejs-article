@@ -12,8 +12,10 @@ app.use(morgan("dev"));
 
 app.use(cors());
 
-app.use("/", taskRouter);
+app.use("/api/posts", taskRouter);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, (error) => {
+  error
+    ? console.log(error)
+    : console.log(`Server running at http://localhost:${PORT}`);
 });
