@@ -1,9 +1,9 @@
 ### Get list from server
 
-GET http://localhost:8000/api/posts
+GET http://localhost:4000/api/posts
 
 ### Post data to server
-POST http://localhost:8000/api/posts
+POST http://localhost:4000/api/posts
 # header of the request
 Content-Type: application/json
 
@@ -18,7 +18,7 @@ Content-Type: application/json
   "date": "24/04/2024"
 }
 ### update data to server
-PATCH  http://localhost:8000/api/posts
+PATCH  http://localhost:4000/api/posts
 # header of the request
 Content-Type: application/json
 
@@ -29,7 +29,7 @@ Content-Type: application/json
     "type": "bad"
 }
 ### delete data from server
-DELETE   http://localhost:8000/api/posts
+DELETE   http://localhost:4000/api/posts
 # header of the request
 Content-Type: application/json
 
