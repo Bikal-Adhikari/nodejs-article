@@ -1,4 +1,6 @@
-import { getTasks, insertTask } from "../models/task/taskModel";
+import { getTasks, insertTask } from "../models/task/taskModel.js";
+import express from "express";
+const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
