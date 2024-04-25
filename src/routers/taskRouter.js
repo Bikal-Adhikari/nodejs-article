@@ -77,4 +77,30 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+// Delete a task
+router.delete("/:id", async (req, res) => {
+  const taskId = req.params.id;
+  try {
+    const result = await deleteTask(taskId);
+    if (result) {
+      res.json({
+        status: "success",
+        message: "Task has been deleted",
+      });
+    } else {
+      res.status(404).json({
+        status: "failure",
+        message: "Task not found",
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      status: "failure",
+      message: "Error deleting task",
+    });
+  }
+});
+
+
 export default router;
