@@ -1,18 +1,42 @@
-app.get("/api/posts", async (req, res) => {
+import { getTasks } from "../models/task/taskModel";
+
+router.get("/", async (req, res) => {
   try {
-    const posts = await Post.find();
-    res.json(posts);
+    const result = await getTasks();
+    console.log(result);
+    res.json({
+      status: "success",
+      message: `Here are the tasks`,
+      task: result,
+    });
   } catch (error) {
-    res.status(500).json({ message: "Error fetching posts" });
+    console.log(error);
+    res.status(500).json({
+      status: "failure",
+      message: error.message,
+    });
   }
 });
 
-app.post("/api/posts", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const newPost = new Post(req.body);
-    await newPost.save();
-    res.status(201).json(newPost);
+    const result = await insertTask(req.body);
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+    result?._id
+      ? res.json({
+          status: "success",
+          message: `New data has been added`,
+        })
+      : res.json({
+          status: "failure",
+          message: `Failed to add new data`,
+        });
   } catch (error) {
-    res.status(500).json({ message: "Error creating post" });
+    console.log(error);
+    res.status(500).json({
+      status: "failure",
+      message: error.message,
+    });
   }
 });

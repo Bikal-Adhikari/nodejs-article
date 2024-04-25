@@ -1,0 +1,41 @@
+### Get list from server
+
+GET http://localhost:8000/api/posts
+
+### Post data to server
+POST http://localhost:8000/api/posts
+# header of the request
+Content-Type: application/json
+
+
+# body of the request, there should be gap between header and body
+{
+    "title": "Exploring the Potential of Quantum Computing",
+ 
+  "content": "Quantum computing represents a paradigm shift in computation, promising unprecedented processing power and the ability to solve complex problems at a speed unimaginable with classical computers. With applications ranging from cryptography and drug discovery to optimization and machine learning, quantum computing is poised to revolutionize various industries. This post delves into the fundamentals of quantum computing and its potential impact on the future.",
+ 
+  "author": "Daniel Lee",
+  "date": "24/04/2024"
+}
+### update data to server
+PATCH  http://localhost:8000/api/posts
+# header of the request
+Content-Type: application/json
+
+
+# body of the request, there should be gap between header and body
+{
+    "_id":"661e0407ba9d7389f01733f0",
+    "type": "bad"
+}
+### delete data from server
+DELETE   http://localhost:8000/api/posts
+# header of the request
+Content-Type: application/json
+
+
+# body of the request, there should be gap between header and body
+{
+    "_id":"66259f5df1b5bb2af1aba48d"
+   
+}
