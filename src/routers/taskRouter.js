@@ -1,4 +1,4 @@
-import { getTasks } from "../models/task/taskModel";
+import { getTasks, insertTask } from "../models/task/taskModel";
 
 router.get("/", async (req, res) => {
   try {
@@ -21,8 +21,6 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const result = await insertTask(req.body);
-    const currentDate = new Date();
-    const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
     result?._id
       ? res.json({
           status: "success",
@@ -40,3 +38,5 @@ router.post("/", async (req, res) => {
     });
   }
 });
+
+export default router;
