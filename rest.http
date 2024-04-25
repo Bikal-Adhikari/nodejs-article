@@ -14,8 +14,7 @@ Content-Type: application/json
  
   "content": "Quantum computing represents a paradigm shift in computation, promising unprecedented processing power and the ability to solve complex problems at a speed unimaginable with classical computers. With applications ranging from cryptography and drug discovery to optimization and machine learning, quantum computing is poised to revolutionize various industries. This post delves into the fundamentals of quantum computing and its potential impact on the future.",
  
-  "author": "Daniel Lee",
-  "date": "24/04/2024"
+  "author": "Daniel Lee"
 }
 ### update data to server
 PATCH  http://localhost:4000/api/posts
