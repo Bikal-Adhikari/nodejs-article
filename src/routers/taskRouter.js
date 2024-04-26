@@ -78,8 +78,8 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete a task
-router.delete("/:id", async (req, res) => {
-  const taskId = req.params.id;
+router.delete("/", async (req, res) => {
+  const taskId = req.body;
   try {
     const result = await deleteTask(taskId);
     if (result) {
@@ -101,6 +101,5 @@ router.delete("/:id", async (req, res) => {
     });
   }
 });
-
 
 export default router;
