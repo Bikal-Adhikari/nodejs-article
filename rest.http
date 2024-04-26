@@ -16,3 +16,15 @@ Content-Type: application/json
  
   "author": "Sophia Patel"
 }
+
+### update data to server
+PUT http://localhost:4000/api/posts/:id
+# header of the request
+Content-Type: application/json
+
+
+# body of the request, there should be gap between header and body
+{
+    "_id":"662b4dfd9a0875389016556a",
+    "date": "20/03/2023"
+}
