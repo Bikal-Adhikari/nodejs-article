@@ -10,9 +10,9 @@ Content-Type: application/json
 
 # body of the request, there should be gap between header and body
 {
-    "title": "Exploring the Potential of Quantum Computing",
+    "title": "The Evolution of E-Commerce: Trends and Innovations",
  
-  "content": "Quantum computing represents a paradigm shift in computation, promising unprecedented processing power and the ability to solve complex problems at a speed unimaginable with classical computers. With applications ranging from cryptography and drug discovery to optimization and machine learning, quantum computing is poised to revolutionize various industries. This post delves into the fundamentals of quantum computing and its potential impact on the future.",
+  "content": "E-commerce has come a long way since its inception, constantly evolving to meet the changing needs and preferences of consumers. From the early days of online shopping to the rise of mobile commerce and social commerce, the e-commerce landscape continues to transform. This post examines key trends and innovations shaping the future of e-commerce, including AI-powered personalization, augmented reality shopping experiences, and the growing role of sustainability.",
  
-  "author": "Daniel Lee"
+  "author": "Sophia Patel"
 }
