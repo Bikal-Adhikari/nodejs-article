@@ -16,25 +16,3 @@ Content-Type: application/json
  
   "author": "Daniel Lee"
 }
-### update data to server
-PATCH  http://localhost:4000/api/posts
-# header of the request
-Content-Type: application/json
-
-
-# body of the request, there should be gap between header and body
-{
-    "_id":"661e0407ba9d7389f01733f0",
-    "type": "bad"
-}
-### delete data from server
-DELETE   http://localhost:4000/api/posts
-# header of the request
-Content-Type: application/json
-
-
-# body of the request, there should be gap between header and body
-{
-    "_id":"66259f5df1b5bb2af1aba48d"
-   
-}
