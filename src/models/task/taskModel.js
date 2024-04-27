@@ -27,11 +27,11 @@ export const getTasks = async () => {
 };
 
 // Update
-export const updateTask = async ({ _id, type }) => {
+export const updateTask = async ({ _id, title, content, author }) => {
   try {
     const updatedTask = await TaskSchema.findByIdAndUpdate(
       _id,
-      { type },
+      { title, content, author },
       { new: true }
     );
     return updatedTask;
