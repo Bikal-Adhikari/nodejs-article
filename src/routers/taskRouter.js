@@ -78,8 +78,8 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete a task
-router.delete("/", async (req, res) => {
-  const taskId = req.body;
+router.delete("/:id", async (req, res) => {
+  const taskId = req.params.id;
   try {
     const result = await deleteTask(taskId);
     if (result) {
@@ -94,7 +94,7 @@ router.delete("/", async (req, res) => {
       });
     }
   } catch (error) {
-    console.error(error);
+    console.error("Error deleting task:", error);
     res.status(500).json({
       status: "failure",
       message: "Error deleting task",

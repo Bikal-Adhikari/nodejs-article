@@ -41,11 +41,11 @@ export const updateTask = async ({ _id, type }) => {
 };
 
 // Delete
-export const deleteTask = async (ids) => {
+export const deleteTask = async (id) => {
   try {
-    const result = await TaskSchema.deleteMany({ _id: { $in: ids } });
+    const result = await TaskSchema.findByIdAndDelete(id);
     return result;
   } catch (error) {
-    throw new Error(`Error deleting tasks: ${error.message}`);
+    throw new Error(`Error deleting task: ${error.message}`);
   }
 };
